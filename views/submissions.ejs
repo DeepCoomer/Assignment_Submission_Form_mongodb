@@ -1,0 +1,46 @@
+<%- include("./partials/header") %>
+    <div class="container my-4">
+        <h1 class="text-center">Submissions</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Student</th>
+                    <th scope="col">Roll No</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">DriveLink</th>
+                    <th scope="col">Pdf</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% details.forEach(item=> { %>
+                    <tr>
+                        <td scope="row">
+                            <%= item._id%>
+                        </td>
+                        <td>
+                            <%= item.student%>
+                        </td>
+                        <td>
+                            <%= item.rollno%>
+                        </td>
+                        <td>
+                            <%= item.year%>
+                        </td>
+                        <td>
+                            <%= item.email%>
+                        </td>
+                        <td>
+                            <%= item.drivelink%>
+                        </td>
+                        <td>
+                            <%= item.pdf%>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+            </tbody>
+            </table>
+    </div>
+    <%- include("./partials/footer") %>
